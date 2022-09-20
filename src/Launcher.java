@@ -5,12 +5,11 @@ public class Launcher {
         System.out.println("Bienvenue !");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        if (str.equals("quit")){
-            return;
-        }
-        else{
+        while (!str.equals("quit")){
             System.out.println("Unknown command");
+            scanner = new Scanner(System.in);
+            str = scanner.nextLine();
         }
-        scanner.close();
+        return;
     }
 }
